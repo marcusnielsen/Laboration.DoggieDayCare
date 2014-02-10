@@ -11,6 +11,7 @@ namespace Laboration.DoggieDayCare
     {
         protected void Application_Start()
         {
+            UnityConfig.RegisterComponents(); 
             GlobalConfiguration.Configure(WebApiConfig.Register);
         }
     }
