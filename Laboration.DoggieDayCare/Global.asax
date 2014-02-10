@@ -1,1 +1,1 @@
-﻿<%@ Application Codebehind="Global.asax.cs" Inherits="Laboration.DoggieDayCare.WebApiApplication" Language="C#" %>
+﻿<%@ Application Codebehind="Global.asax.cs" Inherits="Laboration.DoggieDayCare.WebService.WebApiApplication" Language="C#" %>

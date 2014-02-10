@@ -1,9 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
-VisualStudioVersion = 12.0.21005.1
+VisualStudioVersion = 12.0.30110.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Laboration.DoggieDayCare", "Laboration.DoggieDayCare\Laboration.DoggieDayCare.csproj", "{AB66493D-8AD4-41CF-B1B5-A6159555D6C4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Laboration.DoggieDayCare.Model", "Laboration.DoggieDayCare.Model\Laboration.DoggieDayCare.Model.csproj", "{E77D9AE2-1E3D-4256-98E8-53A9008442BC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Laboration.DoggieDayCare.WebClient", "Laboration.DoggieDayCare.WebClient\Laboration.DoggieDayCare.WebClient.csproj", "{0FD4BF15-F442-44F6-B084-183B6CE52D40}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +19,14 @@ Global
 		{AB66493D-8AD4-41CF-B1B5-A6159555D6C4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AB66493D-8AD4-41CF-B1B5-A6159555D6C4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AB66493D-8AD4-41CF-B1B5-A6159555D6C4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E77D9AE2-1E3D-4256-98E8-53A9008442BC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E77D9AE2-1E3D-4256-98E8-53A9008442BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E77D9AE2-1E3D-4256-98E8-53A9008442BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E77D9AE2-1E3D-4256-98E8-53A9008442BC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0FD4BF15-F442-44F6-B084-183B6CE52D40}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0FD4BF15-F442-44F6-B084-183B6CE52D40}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0FD4BF15-F442-44F6-B084-183B6CE52D40}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0FD4BF15-F442-44F6-B084-183B6CE52D40}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
