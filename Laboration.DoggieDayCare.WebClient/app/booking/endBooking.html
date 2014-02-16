@@ -1,0 +1,49 @@
+﻿<form name="addBookingForm">
+    <div class="row">
+        <div class="col-md-6 col-md-offset-3">
+            <div class="form-group">
+                <label for="bookingNumber">Booking number</label>
+                <input type="text" class="form-control" name="bookingNumber" data-ng-model="endBookingData.Id" />
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6 top-margin">
+            <div class="form-group">
+                <label for="checkOut">Check-out</label>
+                <input type="text" class="form-control" name="checkOut" data-ng-model="endBookingData.CheckOut" />
+            </div>
+        </div>
+        <div class="col-md-6 top-margin">
+            <div class="form-group">
+                <label for="endFoodWeight">Check-out food weight</label>
+                <input type="text" class="form-control" name="endFoodWeight" data-ng-model="endBookingData.CheckOutFoodWeight" />
+            </div>
+        </div>
+    </div>
+
+    <div data-ng-repeat="data in endBookingData.Data" class="row">
+        <div class="col-md-4 text-right top-margin">
+            <label>{{data.key}}</label>
+        </div>
+        <div class="col-md-8 top-margin">
+            <div class="form-group">
+                <input type="text" class="form-control" name="currentFoodWeight" data-ng-value="data.value" />
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-xs-12 text-right top-margin">
+            <div class="form-group">
+                <div class="btn btn-success btn-lg" data-ng-click="endBooking()">
+                    Send
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+<div>
+    {{result.endResult}}
+</div>

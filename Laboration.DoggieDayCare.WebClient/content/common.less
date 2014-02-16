@@ -1,0 +1,28 @@
+﻿@footer-height: 40px;
+
+html, body {
+    height: 100%;
+}
+
+.wrapper {
+    min-height: 100%;
+    height: auto !important;
+    height: 100%;
+    margin-bottom: -@footer-height;
+}
+
+.footer, .push {
+    height: @footer-height;
+}
+
+.top-margin {
+    margin-top: 15px;
+}
+
+/*Angular UI fix*/
+.nav, .pagination, .carousel, .panel-title a { cursor: pointer; }
+
+/*Angular hide until loaded fix*/
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+    display: none !important;
+}

@@ -1,0 +1,63 @@
+﻿<form name="addBookingForm">
+    <div class="row">
+        <div class="col-md-6 col-md-offset-3">
+            <div class="form-group">
+                <label for="ownerCivicRegistrationNumber">Owner civic registration number</label>
+                <input type="text" class="form-control" name="ownerCivicRegistrationNumber" data-ng-model="addBookingData.OwnerCivicRegistrationNumber" />
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6 top-margin">
+            <div class="form-group">
+                <label for="dogRegistrationNumber">Dog registration number</label>
+                <input type="text" class="form-control" name="dogRegistrationNumber" data-ng-model="addBookingData.DogRegistrationNumber" />
+            </div>
+        </div>
+        <div class="col-md-6 top-margin">
+            <div class="form-group">
+                <label for="dogBreed">Dog breed</label>
+                <input type="text" class="form-control" name="dogBreed" data-ng-model="addBookingData.DogBreedName" />
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6 top-margin">
+            <div class="form-group">
+                <label for="checkIn">Check-in</label>
+                <input type="text" class="form-control" name="checkIn" data-ng-model="addBookingData.CheckIn" />
+            </div>
+        </div>
+        <div class="col-md-6 top-margin">
+            <div class="form-group">
+                <label for="currentFoodWeight">CurrentFoodWeight</label>
+                <input type="text" class="form-control" name="currentFoodWeight" data-ng-model="addBookingData.CheckInFoodWeight" />
+            </div>
+        </div>
+    </div>
+   
+    <div data-ng-repeat="data in addBookingData.Data" class="row">
+        <div class="col-md-4 text-right top-margin">
+            <label>{{data.Key}}</label>
+        </div>
+        <div class="col-md-8 top-margin">
+            <div class="form-group">
+                <input type="text" class="form-control" name="currentFoodWeight" data-ng-value="data.Value" />
+            </div>
+        </div>
+    </div>
+    
+    <div class="row">
+        <div class="col-xs-12 text-right top-margin">
+            <div class="form-group">
+                <div class="btn btn-success btn-lg" data-ng-click="addBooking()">
+                    Send
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+
+<div>
+   {{result.addResult}}
+</div>
