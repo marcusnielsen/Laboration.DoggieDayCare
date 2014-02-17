@@ -27,8 +27,17 @@ namespace Laboration.DoggieDayCare.WebService.Models
 
         public Booking AddBooking(Booking booking)
         {
-            return DoggieDayCareContext.Bookings.Add(booking);
+            booking.DogBreed = DoggieDayCareContext.DogBreeds.FirstOrDefault(dogBreed => dogBreed.BreedName == booking.DogBreed.BreedName);
 
+            if (booking.DogBreed == null)
+            {
+                throw new NullReferenceException("Booking with ID: " + booking.Id + " did not have a specified dog breed.");
+            }
+
+            booking.DogBreed.BaseCosts =
+                DoggieDayCareContext.BaseCostses.FirstOrDefault(baseCost => baseCost.Title == booking.DogBreed.BaseCosts.Title);
+            
+            return DoggieDayCareContext.Bookings.Add(booking);
         }
 
         public Booking EndBooking(Booking booking)

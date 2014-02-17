@@ -40,11 +40,11 @@
                 <div class="btn btn-success btn-lg" data-ng-click="endBooking()">
                     Send
                 </div>
+                <h3 data-ng-show="result.endResult !== ''">Total Price: {{result.endResult.CostSum}}</h3>
             </div>
         </div>
     </div>
 </form>
 <div>
-    <h3 data-ng-show="result.endResult !== ''">Total Price: {{result.endResult.CostSum}}</h3>
     {{result.endResult}}
 </div>

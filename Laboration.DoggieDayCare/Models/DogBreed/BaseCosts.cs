@@ -18,7 +18,7 @@ namespace Laboration.DoggieDayCare.WebService.Models
 
         private static readonly BaseCosts _mediumBaseCosts = new BaseCosts()
         {
-            Title = "Default",
+            Title = "Medium",
             PerDayOfCare = 200,
             PerKiloGramOfFood = 50,
             HousingFactor = 1.3M,
@@ -27,7 +27,7 @@ namespace Laboration.DoggieDayCare.WebService.Models
 
         private static readonly BaseCosts _ostermalmBaseCosts = new BaseCosts()
         {
-            Title = "Default",
+            Title = "Special",
             PerDayOfCare = 200,
             PerKiloGramOfFood = 50,
             HousingFactor = 1.5M,

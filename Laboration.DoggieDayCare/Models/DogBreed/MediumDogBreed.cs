@@ -7,14 +7,10 @@ namespace Laboration.DoggieDayCare.WebService.Models
 {
     public class MediumDog : DogBreed
     {
-        public override string BreedName
-        {
-            get { return "Medium"; }
-        }
-
         public MediumDog()
         {
             BaseCosts = BaseCosts.GetMediumBaseCosts();
+            BreedName = "Medium";
         }
     }
 }

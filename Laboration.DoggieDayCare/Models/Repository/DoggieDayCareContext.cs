@@ -14,9 +14,6 @@ namespace Laboration.DoggieDayCare.WebService.Models
 
         public DoggieDayCareContext()
         {
-            this.Configuration.LazyLoadingEnabled = false;
-            this.Configuration.ProxyCreationEnabled = false;
-
             Database.SetInitializer(
                 new MigrateDatabaseToLatestVersion<DoggieDayCareContext, DoggieDayCareMigrationsConfiguration>()
                 );

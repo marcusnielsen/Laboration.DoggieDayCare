@@ -12,7 +12,7 @@ namespace Laboration.DoggieDayCare.WebService.Models
 
         public int Id { get; set; }
         public virtual BaseCosts BaseCosts { get; set; }
-        public abstract String BreedName { get; }
+        public String BreedName { get; set; }
 
         // Not good code. Fire this developer!
         public static DogBreed GetBreedByName(string dogBreedName)
