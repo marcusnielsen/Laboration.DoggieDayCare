@@ -15,7 +15,7 @@ namespace Laboration.DoggieDayCare.WebService.Models
         public override decimal GetCostOfCare(Booking booking)
         {
             var daySpanAsDecimal = Convert.ToDecimal((booking.CheckOut.ToUniversalTime() - booking.CheckIn.ToUniversalTime()).TotalDays);
-            var housingCost = daySpanAsDecimal * BaseCosts.PerDayOfCare * 1.3M;
+            var housingCost = daySpanAsDecimal * BaseCosts.PerDayOfCare * 1.5M;
 
             var foodCost = BaseCosts.PerKiloGramOfFood * (booking.CheckInFoodWeight - booking.CheckOutFoodWeight) * 1.5M;
 
