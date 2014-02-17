@@ -35,7 +35,7 @@
             </div>
         </div>
     </div>
-   
+
     <div data-ng-repeat="data in addBookingData.Data" class="row">
         <div class="col-md-4 text-right top-margin">
             <label>{{data.Key}}</label>
@@ -46,18 +46,16 @@
             </div>
         </div>
     </div>
-    
+
     <div class="row">
-        <div class="col-xs-12 text-right top-margin">
+
+        <div class="col-md-6 col-md-offset-6 text-right top-margin">
             <div class="form-group">
                 <div class="btn btn-success btn-lg" data-ng-click="addBooking()">
                     Send
                 </div>
+                <h3 data-ng-show="result.addResult !== ''">Registration number <strong>{{result.addResult}}</strong></h3>
             </div>
         </div>
     </div>
 </form>
-
-<div>
-   {{result.addResult}}
-</div>

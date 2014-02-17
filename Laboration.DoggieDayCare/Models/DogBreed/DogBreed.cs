@@ -13,17 +13,16 @@ namespace Laboration.DoggieDayCare.WebService.Models
         public int Id { get; set; }
         public virtual BaseCosts BaseCosts { get; set; }
         public abstract String BreedName { get; }
-        public abstract decimal GetCostOfCare(Booking booking);
-
-        protected DogBreed()
-        {
-            BaseCosts = BaseCosts.GetDefaultBaseCosts();
-        }
 
         // Not good code. Fire this developer!
         public static DogBreed GetBreedByName(string dogBreedName)
         {
             return _dogBreeds.FirstOrDefault(dogBreed => dogBreed.BreedName == dogBreedName);
+        }
+
+        public decimal GetCostOfCare(Booking booking)
+        {
+            return BaseCosts.GetSum(booking);
         }
     }
 }

@@ -12,14 +12,9 @@ namespace Laboration.DoggieDayCare.WebService.Models
             get { return "Beast"; }
         }
 
-        public override decimal GetCostOfCare(Booking booking)
+        public Beast()
         {
-            var daySpanAsDecimal = Convert.ToDecimal((booking.CheckOut.ToUniversalTime() - booking.CheckIn.ToUniversalTime()).TotalDays);
-            var housingCost = daySpanAsDecimal * BaseCosts.PerDayOfCare * 1.5M;
-
-            var foodCost = BaseCosts.PerKiloGramOfFood * (booking.CheckInFoodWeight - booking.CheckOutFoodWeight) * 1.5M;
-
-            return housingCost + foodCost;
+            BaseCosts = BaseCosts.GetSpecialOffer();
         }
 
         public string DogBreed

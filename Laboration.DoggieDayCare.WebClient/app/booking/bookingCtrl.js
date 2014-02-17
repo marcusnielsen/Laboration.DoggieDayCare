@@ -24,6 +24,8 @@
         $scope.addBooking = function () {
             $http.post("http://localhost:49640/api/Booking", $scope.addBookingData, {}).then(function(result) {
                 $scope.result.addResult = result.data;
+
+                $scope.endBookingData.Id = result.data;
             });
         };
 

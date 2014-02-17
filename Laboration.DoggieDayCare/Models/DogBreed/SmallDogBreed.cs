@@ -12,10 +12,9 @@ namespace Laboration.DoggieDayCare.WebService.Models
             get { return "Small"; }
         }
 
-        public override decimal GetCostOfCare(Booking booking)
+        public SmallDog()
         {
-                var daySpanAsDecimal = Convert.ToDecimal((booking.CheckOut.ToUniversalTime() - booking.CheckIn.ToUniversalTime()).TotalDays);
-                return daySpanAsDecimal * BaseCosts.PerDayOfCare;
+            BaseCosts = BaseCosts.GetDefaultBaseCosts();
         }
     }
 }
